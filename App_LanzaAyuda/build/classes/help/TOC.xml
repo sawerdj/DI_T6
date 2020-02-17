@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE toc
+  PUBLIC 
+  "-//Sun Microsystems Inc.//DTD 
+   JavaHelp TOC Version 2.0//EN"
+  "http://java.sun.com/products/javahelp/toc_2_0.dtd">
+<toc version="2.0">
+    <tocitem text="Base de datos" target="Base_de_datos">
+    <tocitem text="Busqueda" target="Busqueda_Clientes"/>
+    <tocitem text="Menu Principal" target="Menu_Principal" />
+    <tocitem text="Habitaciones" target="Reserva_Habitaciones" />
+    <tocitem text="Salon" target="Reserva_Salon" />
+  </tocitem>
+</toc>

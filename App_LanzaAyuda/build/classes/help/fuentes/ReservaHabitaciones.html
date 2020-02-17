@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr" style="font-size: 20px;">
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <h1>Reserva de Habitaciones</h1>
+    <hr>
+    <p align="justify">
+      Esta ventana de ayuda le indicará paso a paso como funciona la ventana de <strong>Reserva de Habitaciones</strong> y como introducir
+      paso a paso una <strong>reserva</strong>.
+    </p>
+    <p align="justify">
+      Esta ventana se divide en <strong>dos secciones</strong>, la primera,
+      <strong>Datos del cliente</strong> que podrá encontrar su ayuda detallada en
+      <a href="Reserva.html">Ayuda de Reservas</a>, y <strong>Datos de la reserva</strong>,
+      de la que se hablará en esta sección.
+    </p>
+
+    <p align="center"><img src="resources/images/ReservaHabImg.png" alt=""></p>
+
+    <br>
+
+    <h3>Datos de la Reserva (Habitaciones)</h3>
+    <hr>
+    <p align="justify">
+      Una vez realizada la búsqueda de clientes, detallada en la sección
+      <a href="Reserva.html">Ayuda de Reservas</a>, se habilitarán los campos para reserva las habitaciones.
+      Está sección consta de los siguientes campos:
+    </p>
+<!-- Campos de fecha -->
+    <h4>Campos de Fecha (Entrada y salida)</h4>
+    <p align="justify">
+      Las fechas de entrada y salida podrán ser introducidas mediante dos componentes de tipo
+      <a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/control/DatePicker.html">DatePicker</a>, o selectores de fecha.
+      Para introducir la fecha solo hay que hacer click en el icono del calendario en cada selector.
+      El de la <strong>izquierda</strong>, se corresponde con la <strong>Fecha de entrada</strong>
+      y, el de la <strong>derecha</strong>, con la <strong>Fecha de salida</strong>.
+    </p>
+
+    <ul>
+      <li>
+        <h4>Fecha de entrada</h4>
+        <p align="justify">
+          La <strong>Fecha de entrada</strong> tendrá como valor inicial el día actual. Se podrá seleccionar cualquier
+          día igual o posterior a la fecha actual. <strong>No se podrá seleccionar
+          una día anterior al día actual</strong>. Los días deshabilitados aparecerán con un fondo de color rojo.
+        </p>
+
+        <p align="justify">
+          <u>A tener en cuenta</u>: Al cambiar la fecha de entrada, la fecha de salida se actualizará automáticamente
+          al día posterior.
+        </p>
+      </li>
+
+      <li>
+        <h4>Fecha de salida</h4>
+        <p align="justify">
+          La <strong>Fecha de salida</strong> tendrá como valor inicial el día posterior al día actual. Se podrá
+          seleccionar un día igual o posterior a la fecha de entrada. <strong>No se podrá seleccionar un día de salida
+          anterior a la fecha de entrada</strong>. Al seleccionar un día posterior, <strong>se avisará al usuario</strong> de que no puede seleccionar
+          esa fecha.
+        </p>
+      </li>
+    </ul>
+    <br>
+<!-- Fin de Campos de fecha -->
+<!-- Numeros de habitaciones -->
+    <h4>Número de Habitaciones</h4>
+    <p align="justify">
+      El <strong>número de habitaciones</strong> podrá seleccionarse mediante un componente de tipo <a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/control/Spinner.html">Spinner</a>, o selector de ruleta,
+      <strong>con valor por defecto 1</strong>. El <strong>máximo de habitaciones por defecto</strong> está establecido en <strong>100</strong>
+      y el <strong>mínimo</strong> en <strong>1</strong>. El campo incluye dos botones con indicadores en forma de flecha que permiten <strong>incrementar o decrementar</strong>
+      el valor actual.
+    </p>
+    <br>
+<!-- Fin de Numeros de habitaciones -->
+<!-- Tipo de habitaciones -->
+    <h4>Tipo de Habitacion</h4>
+    <p align="justify">
+      El <strong>tipo de habitación</strong> podrá seleccionarse mediante un componente de tipo <a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/control/ComboBox.html">ComboBox</a>, o desplegable,
+      que incluye tipos <a href="https://docs.oracle.com/javase/7/docs/api/java/lang/String.html">String</a>, o cadena de caracteres, para referirse al <strong>tipo de habitación</strong>.
+    </p>
+
+    <p align="justify">
+      El usuario podrá elegir entre: <strong>Individual</strong>, <strong>Suite</strong> o <strong>Doble uso individual</strong>. El valor por defecto no está establecido.
+    </p>
+
+    <p align="justify">
+      <u>Este componente dispone de control de errores</u>. <strong>Si el usuario se olvida de seleccionar un tipo de habitación</strong>, en la alerta, detallada en <a href="Reserva.html">Ayuda de Reservas</a>, aparecerá un mensaje
+      <strong>avisando al usuario</strong> de que seleccione un tipo de habitación.
+    </p>
+    <br>
+<!-- Fin de Tipo de habitaciones -->
+<!-- Regimen de habitaciones -->
+    <h4>Régimen de Habitaciones</h4>
+    <p align="justify">
+      El <strong>régimen de las habitaciones</strong> podrá seleccionarse mediante <a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/control/RadioButton.html">RadioButtons</a>, o selectores de botón,
+      los cuáles <strong>solo le permiten seleccionar una</strong> de entre todas las opciones disponibles.
+    </p>
+
+    <p align="justify">
+      Las opciones disponibles por defecto son: <strong>Media pensión</strong>, <strong>Pensión completa</strong> y <strong>Alojamiento y desayuno</strong>.
+    </p>
+
+    <p align="justify">
+      <u>Este componente dispone de control de errores</u>. <strong>Si el usuario se olvida de seleccionar un régimen de habitación</strong>, en la alerta, detallada en <a href="Reserva.html">Ayuda de Reservas</a>, aparecerá un mensaje
+      <strong>avisando al usuario</strong> de que seleccione un régimen de habitación.
+    </p>
+    <br>
+<!-- Fin de Regimen de habitaciones -->
+<!-- Fumadores -->
+    <h4>Fumadores</h4>
+    <p align="justify">
+      Si el cliente es <strong>fumador</strong>, el usuario dispone de un componente de tipo <a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/control/CheckBox.html">Checkbox</a>, o selector, al cual podrá <strong>hacer click para indicar que el cliente es fumador</strong>.
+      Tras hacer click, aparecerá un mensaje indicando al usuario el funcionamiento de las habitaciones de fumadores.
+    </p>
+
+    <p align="justify">
+      Mensaje: <br>
+      <i>"En virtud de la ley de sanidad se informa a los clientes de que solo podrán fumar en las habitaciones reservadas para tal fin."</i>
+    </p>
+<!-- Fin de Fumadores -->
+  <br>
+  <ul>
+    <li><a href="ReservaSalon.html">Ir a Reserva de Salón Habana</a></li>
+    <li><a href="Reserva.html">Volver a Reservas</a></li>
+    <li><a href="Index.html">Volver a Inicio</a></li>
+  </ul>
+  <br>
+  </body>
+</html>

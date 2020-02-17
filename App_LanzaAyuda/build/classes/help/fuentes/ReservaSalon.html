@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr" style="font-size: 20px;">
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <h1>Reserva de Salón Habana</h1>
+    <hr>
+    <p align="justify">
+      Esta ventana de ayuda le indicará paso a paso como funciona la ventana de <strong>Reserva de Salón Habana</strong> y como introducir
+      paso a paso una <strong>reserva</strong>.
+    </p>
+    <p align="justify">
+      Esta ventana se divide en <strong>dos secciones</strong>, la primera,
+      <strong>Datos del cliente</strong> que podrá encontrar su ayuda detallada en
+      <a href="Reserva.html">Ayuda de Reservas</a>, y <strong>Datos de la reserva</strong>,
+      de la que se hablará en esta sección.
+    </p>
+
+    <p align="center"><img src="resources/images/ReservaSalonImg.png" alt=""></p>
+
+    <br>
+
+    <h3>Datos de la Reserva (Salón Habana)</h3>
+    <hr>
+    <p align="justify">
+      Una vez realizada la búsqueda de clientes, detallada en la sección
+      <a href="Reserva.html">Ayuda de Reservas</a>, se habilitarán los campos para reserva del Salón Habana.
+      Está sección consta de los siguientes campos:
+    </p>
+<!-- Numero de personas -->
+    <h4>Numero de personas</h4>
+    <p align="justify">
+      Este campo está formado por dos componentes, un <a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/control/TextField.html">TextField</a>,
+      o campo de texto, en el que <strong>se introducirá el número de personas</strong>, y un componente de tipo
+      <a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/control/Button.html">Button</a>, o botón,
+      <strong>para validar el número de personas</strong>.
+    </p>
+    <p align="justify">
+      Tal y como se indica más adelante en el <strong>Tipo de evento</strong>, cada evento tiene un máximo de personas. El botón que valida el número de personas
+      se encarga de <strong>activar las opciones según el número de personas introducidas</strong>. Esta comprobación se puede iniciar pulsando el botón <i>Intro</i> del teclado mientras
+      se está en el campo de texto o pulsando en el botón para validar.
+    </p>
+    <br>
+<!-- Fin de Campos de fecha -->
+
+<!-- Tipo de Evento -->
+    <h4>Tipo de Evento</h4>
+    <p align="justify">
+      El <strong>tipo de evento</strong> deberá seleccionarse mediante <a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/control/RadioButton.html">RadioButtons</a>, o selector de botón,
+      los cuáles <strong>solo le permiten seleccionar una</strong> de entre todas las opciones disponibles.
+    </p>
+
+    <p align="justify">
+      Las opciones disponibles por defecto son: <strong>Banquete</strong>, <strong>Jornada</strong> y <strong>Congreso</strong>.
+    </p>
+
+    <p align="justify">
+      Al seleccionar una opción, se activarán los diferentes componentes. Al seleccionar <strong>Banquete</strong>, se activará el tipo de cocina. Al seleccionar <strong>Jornada</strong>,
+      no se activa ninguna componente adicional. Al seleccionar <strong>Congreso</strong>, se activarán la opción para introducir el <strong>número de días</strong> y
+      la opción de introducir si el usuario desea <strong>habitaciones</strong>.
+    </p>
+    <br>
+<!-- Fin de Tipo de Evento -->
+
+<!-- Tipo de cocina -->
+    <h4>Tipo de Cocina</h4>
+    <p align="justify">
+      El <strong>tipo de cocina</strong> podrá seleccionarse mediante un componente de tipo <a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/control/ComboBox.html">ComboBox</a>, o desplegable,
+      que incluye tipos <a href="https://docs.oracle.com/javase/7/docs/api/java/lang/String.html">String</a>, o cadena de caracteres, para referirse al <strong>tipo de cocina</strong>.
+    </p>
+
+    <p align="justify">
+      El usuario podrá elegir entre: <strong>No precisa</strong>, <strong>Buffet</strong>, <strong>Carta</strong> o <strong>Cita con Chef</strong>. El valor por defecto está establecido en <strong>No precisa</strong>.
+    </p>
+    <br>
+<!-- Fin de Tipo de cocina -->
+
+<!-- Necesitas Habitaciones -->
+    <h4>Necesitas Habitaciones</h4>
+    <p align="justify">
+      Este apartado se compone de 2 componentes, un <a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/control/CheckBox.html">Checkbox</a> y un
+      <a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/control/TextField.html">TextField</a>. <strong>Al pulsar</strong> en el <a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/control/CheckBox.html">Checkbox</a>, el
+      <a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/control/TextField.html">TextField</a> <strong>se activará</strong>, permitiendo al usuario <strong>introducir el número de habitaciones</strong>.
+    </p>
+
+    <p align="justify">
+      El usuario podrá elegir entre: <strong>No precisa</strong>, <strong>Buffet</strong>, <strong>Carta</strong> o <strong>Cita con Chef</strong>. El valor por defecto está establecido en <strong>No precisa</strong>.
+    </p>
+
+    <p><u>Este componente dispone de control de errores</u>. <strong>Si el usuario introduce un carácter no númerico</strong>, en la alerta, detallada en <a href="Reserva.html">Ayuda de Reservas</a>, aparecerá un mensaje
+    <strong>avisando al usuario</strong> de que introduzca un número valido.</p>
+    <br>
+<!-- Necesitas Habitaciones -->
+
+<!-- Campos de fecha -->
+    <h4>Campo de Fecha</h4>
+    <p align="justify">
+      La <strong>Fecha de reserva del salón</strong> podrá ser introducida mediante un componentes de tipo
+      <a href="https://docs.oracle.com/javase/8/javafx/api/javafx/scene/control/DatePicker.html">DatePicker</a>, o selector de fecha.
+      Para introducir la fecha solo hay que hacer click en el icono del calendario en el selector.
+    </p>
+
+    <p align="justify">
+      La <strong>Fecha de reserva</strong> tendrá como valor inicial el día actual. Se podrá seleccionar cualquier
+      día igual o posterior a la fecha actual. <strong>No se podrá seleccionar
+      una día anterior al día actual</strong>. Los días deshabilitados aparecerán con un fondo de color rojo.
+    </p>
+<!-- Fin de Campos de fecha -->
+  <br>
+  <ul>
+    <li><a href="ReservaHabitaciones.html">Ir a Reserva de Habitaciones</a></li>
+    <li><a href="Reserva.html">Volver a Reservas</a></li>
+    <li><a href="Index.html">Volver a Inicio</a></li>
+  </ul>
+  <br>
+  </body>
+</html>

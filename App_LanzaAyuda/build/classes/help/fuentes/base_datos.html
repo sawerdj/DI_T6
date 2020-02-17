@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr" style="font-size: 20px;">
+    <head>
+        <style>
+            table, th, td{
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+            table{
+                width: 80%;
+                text-align: center;
+            }
+            h1{
+                margin-top: 30px;
+                margin-bottom: 20px;
+            }
+            
+            p{
+                margin-top: 10px;
+                margin-bottom: 15px;
+            }
+            
+        </style>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Información sobre la Base de Datos</h1>
+        <p>Nuestra base de datos esta formada por cuatro tablas:
+        </p>
+<!--Tabla Clientes-->
+        <p style="margin-left: 50px">En la primera tabla mostramos los tipos de datos que almacenamos de un cliente</p>
+        <table align="center">
+        <tr>
+            <th colspan="6">Cliente</th>
+        </tr>
+        <tr style="margin: 100px">
+            <th>Nombre</th>
+            <th>Tipo de dato</th>
+            <th>Longitud del dato</th>
+            <th>Clave primaria</th>
+            <th>Clave Externa</th>
+            <th>Permite valor NULL</th>
+        
+        </tr>
+        <tr>
+            <td>DNI</td>
+            <td>VARCHAR</td>
+            <td>9</td>
+            <td>Sí</td>
+            <td>No</td>
+            <td>No</td>
+        </tr>
+        <tr>
+            <td>NOMBRE</td>
+            <td>VARCHAR</td>
+            <td>150</td>
+            <td>No</td>
+            <td>No</td>
+            <td>No</td>
+        </tr>
+        <tr>
+            <td>TELEFONO</td>
+            <td>VARCHAR</td>
+            <td>15</td>
+            <td>No</td>
+            <td>No</td>
+            <td>Sí</td>
+        </tr>
+        <tr>
+            <td>DIRECCION</td>
+            <td>VARCHAR</td>
+            <td>40</td>
+            <td>No</td>
+            <td>No</td>
+            <td>Sí</td>
+        </tr>
+        <tr>
+            <td>LOCALIDAD</td>
+            <td>VARCHAR</td>
+            <td>30</td>
+            <td>No</td>
+            <td>No</td>
+            <td>Sí</td>
+        </tr>
+        <tr>
+            <td>PROVINCIA</td>
+            <td>INTEGER</td>
+            <td>No especificado</td>
+            <td>No</td>
+            <td>Sí(Tabla Provincia)</td>
+            <td>Sí</td>
+        </tr>
+    </table>
+        <p style="margin-left: 50px">En esta siguiente tabla mostramos los tipos de datos que almacenamos sobre una reserva de salón</p>
+<!--Tabla Reserva Salon-->
+    <table align="center">
+        <tr>
+            <th colspan="7">RESERVASALON</th>
+        </tr>
+        <tr style="margin: 100px">
+            <th>Nombre</th>
+            <th>Tipo de dato</th>
+            <th>Longitud del dato</th>
+            <th>Clave primaria</th>
+            <th>Clave Externa</th>
+            <th>Permite valor NULL</th>
+            <th>Otros</th>
+        </tr>
+        <tr>
+            <td>ID</td>
+            <td>INTEGER</td>
+            <td>No especificado</td>
+            <td>Sí</td>
+            <td>No</td>
+            <td>No</td>
+            <td>GENERATED ALWAYS AS IDENTITY</td>
+        </tr>
+        <tr>
+            <td>DNI</td>
+            <td>VARCHAR</td>
+            <td>9</td>
+            <td>No</td>
+            <td>Sí (Tabla Cliente)</td>
+            <td>No</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>EVENTO</td>
+            <td>VARCHAR</td>
+            <td>15</td>
+            <td>No</td>
+            <td>No</td>
+            <td>Sí</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>FECHA</td>
+            <td>DATE</td>
+            <td>-</td>
+            <td>No</td>
+            <td>No</td>
+            <td>No</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>N_PERSONAS</td>
+            <td>INTEGER</td>
+            <td>No especificado</td>
+            <td>No</td>
+            <td>No</td>
+            <td>No</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>COMIDA</td>
+            <td>VARCHAR</td>
+            <td>30</td>
+            <td>No</td>
+            <td>No</td>
+            <td>Sí</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>HABITACIONES</td>
+            <td>INTEGER</td>
+            <td>No especificado</td>
+            <td>No</td>
+            <td>No</td>
+            <td>Sí</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>N_DIAS</td>
+            <td>INTEGER</td>
+            <td>No especificado</td>
+            <td>No</td>
+            <td>No</td>
+            <td>Sí</td>
+            <td>-</td>
+        </tr>
+    </table>
+        <p style="margin-left: 50px">En la próxima tabla mostramos los tipos de datos que almacenamos de una reserva de habitación</p>
+<!--Tabla Reserva Habitación-->
+    <table align="center">
+        <tr>
+            <th colspan="7">RESERVAHABITACION</th>
+        </tr>
+        <tr style="margin: 100px">
+            <th>Nombre</th>
+            <th>Tipo de dato</th>
+            <th>Longitud del dato</th>
+            <th>Clave primaria</th>
+            <th>Clave Externa</th>
+            <th>Permite valor NULL</th>
+            <th>Otros</th>
+        </tr>
+        <tr>
+            <td>ID</td>
+            <td>INTEGER</td>
+            <td>No especificado</td>
+            <td>Sí</td>
+            <td>No</td>
+            <td>No</td>
+            <td>GENERATED ALWAYS AS IDENTITY</td>
+        </tr>
+        <tr>
+            <td>DNI</td>
+            <td>VARCHAR</td>
+            <td>9</td>
+            <td>No</td>
+            <td>No</td>
+            <td>No</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>LLEGADA</td>
+            <td>DATE</td>
+            <td>-</td>
+            <td>No</td>
+            <td>No</td>
+            <td>No</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>SALIDA</td>
+            <td>DATE</td>
+            <td>-</td>
+            <td>No</td>
+            <td>No</td>
+            <td>No</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>N_HABITACIONES</td>
+            <td>INTEGER</td>
+            <td>No especificado</td>
+            <td>No</td>
+            <td>No</td>
+            <td>No</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>TIPO</td>
+            <td>VARCHAR</td>
+            <td>15</td>
+            <td>No</td>
+            <td>No</td>
+            <td>Sí</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>FUMADOR</td>
+            <td>VARCHAR</td>
+            <td>10</td>
+            <td>No</td>
+            <td>No</td>
+            <td>Sí</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>REGIMEN</td>
+            <td>VARCHAR</td>
+            <td>25</td>
+            <td>No</td>
+            <td>No</td>
+            <td>Sí</td>
+            <td>-</td>
+        </tr>
+    </table>
+        <p style="margin-left: 50px">Por último tenemos la tabla de Provincias en la cual almacenamos los siguientes datos: tabla mostramos los tipos de datos que almacenamos sobre una provincia</p>
+<!--Tabla Provincias-->        
+    <table align="center">
+        <tr>
+            <th colspan="7">PROVINCIAS</th>
+        </tr>
+        <tr style="margin: 100px">
+            <th>Nombre</th>
+            <th>Tipo de dato</th>
+            <th>Longitud del dato</th>
+            <th>Clave primaria</th>
+            <th>Clave Externa</th>
+            <th>Permite valor NULL</th>
+            <th>Otros</th>
+        </tr>
+        <tr>
+            <td>ID</td>
+            <td>INTEGER</td>
+            <td>No especificado</td>
+            <td>Sí</td>
+            <td>No</td>
+            <td>No</td>
+            <td>GENERATED ALWAYS AS IDENTITY</td>
+        </tr>
+        <tr>
+            <td>CODIGO</td>
+            <td>CHAR</td>
+            <td>3</td>
+            <td>No</td>
+            <td>No</td>
+            <td>Sí</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>NOMBRE</td>
+            <td>VARCHAR</td>
+            <td>30</td>
+            <td>No</td>
+            <td>No</td>
+            <td>Sí</td>
+            <td>-</td>
+        </tr>
+    </table>
+        <br><br>
+    </body>
+</html>
